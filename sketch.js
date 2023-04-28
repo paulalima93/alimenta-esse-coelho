@@ -158,15 +158,14 @@ function draw()
     bunny.changeAnimation('eating');
     eating_sound.play();
   }
-
-  if(fruit!=null && fruit.position.y>=height-50)
+  
+  if(collide(fruit,ground.body)==true)
   {
     bunny.changeAnimation('crying');
     bk_song.stop();
     sad_sound.play();
     fruit=null;
-     
-   }
+  }
    
 }
 
